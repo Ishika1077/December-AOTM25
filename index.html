@@ -1,11 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Satellite Internet of India</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #222;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /*  NAVBAR  */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .btn {
+      background: #2563eb;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1e4ed8;
+      transform: translateY(-2px);
+    }
+
+    /*  HERO  */
+    .hero {
+      height: 90vh;
+      background:  url(Photos/satellite.jpg) center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    /* SECTIONS  */
+    section {
+      padding: 80px 8%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 50px;
+    }
+
+    /*  CARDS  */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      transition: 0.4s;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,.15);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #2563eb;
+    }
+
+    /*  MAP SECTION  */
+    .map {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 180px;
+      align-items: center;
+    }
+
+    .map img {
+      width: 70%;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /*  BENEFITS  */
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    
+
+    /*  ANIMATIONS  */
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes float {
+      0%,100% {transform: translateY(0);}
+      50% {transform: translateY(-12px);}
+    }
+
+   
+    
+
+    /*  MOBILE */
+    @media(max-width: 768px) {
+      .map {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 36px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-   <h1>Satellite Internet in India...</h1> 
+
+<header>
+  <div class="logo">📡 Satellite Internet </div>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Benefits</a>
+    <a href="#">Challenges</a>
+     <a href="#">Future possiblities</a>
+    <a href="#">Contact</a>
+    <a href="#" class="btn">Sign Up</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Connecting India, One Satellite at a Time</h1>
+    <p>Bringing high-speed internet to every corner of India.</p>
+    <a href="#" class="btn">Learn More</a>
+  </div>
+</section>
+
+<!-- INFO -->
+<section>
+  <h2 class="title">What is Satellite Internet?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>How It Works</h3>
+      <p>Internet data is sent from space directly to your dish antenna.</p>
+    </div>
+    <div class="card">
+      <h3>Key Components</h3>
+      <p>Satellite, ground station, modem, and receiver dish.</p>
+    </div>
+    <div class="card">
+      <h3>Global Coverage</h3>
+      <p>Perfect for rural, remote, and emergency locations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section>
+  <div class="map">
+    <div>
+      <h2>Why India Needs It</h2>
+      <p>Satellite internet bridges the digital gap, supports education, healthcare and business in rural zones.</p>
+    </div>
+    <img src="Photos/Map.png" alt="India Map">
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section>
+  <h2 class="title">Benefits & Challenges</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>✅ Benefits</h3>
+      <ul>
+        <li>Reaches remote regions</li>
+        <li>Disaster resilient</li>
+        <li>High-speed network</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>❌ Challenges</h3>
+      <ul>
+        <li>Latency delay</li>
+        <li>Weather disturbances</li>
+        <li>Higher setup cost</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
 </body>
 </html>
